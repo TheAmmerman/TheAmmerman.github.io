@@ -3,9 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daniel Ammerman</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8441153255.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Daniel Ammerman Portfolio Page</h1>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Logo.jpg" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Fullstack Developer</p>
+            <h1>Hello, I'm <span>Daniel</span><br>Ammerman.</h1>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------about-------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img id="profile" src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p> It's SURPRISING that qt lives at your house.
+                        I don't know HOW you closed that deal.
+                        cause you've never closed anything EVER. You're not a closer.
+                        You're a relief pitcher AT MAX. You're not a fucking clos-
+                        you don't got the ICE COLD VIENS like ME that I was BORN WITH to COMPETE.
+                            You're a 6th/7th inning PITCHER! You pitch those 1 2 inning FOR ME.
+                            So mango can come in and CLOSE THE DEAL. cause IM A CLOSER.!</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development</span><br>Designing Web/App Interfaces</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024</span><br>Java Fullstack Training at Tech Elevator</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024</span><br>Java Fullstack Training at Tech Elevator</li>
+                        <li><span>Messiah University 2013 - 2017</span><br>Bachelor of Arts Degree in Philosophy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- -----------Services--------- -->
+
+<!-- Will be used once I have time for services. Comment for now 
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Serivces</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Description</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>Description</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Description</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- --------------Portfolio------------- -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/TogaProfile.jpg">
+                <div class="layer">
+                    <h3>Vending Machine App</h3>
+                    <p>Java based vending machine app that functions like a real vending machine (CLI) </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/TogaTongue.jpg">
+                <div class="layer">
+                    <h3>TEnmo</h3>
+                    <p>Java and PostgreSQL based cash trading app similar to others that exist - venmo, cashapp, ect.. (CLI)</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/TogaBelly.jpg">
+                <div class="layer">
+                    <h3>Worldbyte</h3>
+                    <p>Meal prep and recipe sharing app which connects users across the globe (Fullstack)</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+
+<script>
+
+
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
 </body>
 </html>
