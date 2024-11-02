@@ -188,7 +188,7 @@ nav ul li a:hover::after{
 }
 .services-list div:hover{
     background: #8ee1d4;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 
@@ -229,8 +229,13 @@ nav ul li a:hover::after{
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     transition: height 0.5s;
+    text-shadow: 
+    1px 1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff;
 }
 .layer h3{
     font-weight: 700;
@@ -249,7 +254,7 @@ nav ul li a:hover::after{
     text-align: center;
 }
 .work:hover img{
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 .work:hover .layer{
     height: 100%;
@@ -350,9 +355,11 @@ nav .fa-solid{
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/ProfileForMobile.jpg);
+        background-size: 70% 60%;
+        background-position: center 70%;
     }
     .header-text{
-        margin-top: 100%;
+        margin-top: 5%;
         font-size: 16px;
     }
     .header-text h1{
