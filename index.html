@@ -11,12 +11,12 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/Logo.jpg" class="logo">
+            <img src="images/Logo1.png" class="logo">
             <ul id="side-menu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#my-work">My Work</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>
@@ -29,7 +29,7 @@
     </div>
 </div>
 
-<!-- ---------------about-------------- -->
+<!----------------- About ---------------->
 <div id="about">
     <div class="container">
         <div class="row">
@@ -38,7 +38,14 @@
             </div>
             <div class="about-col-2">
                 <h1 class="subtitle">About Me</h1>
-                <p> I'm just some peanut butter looking for my jam.</p>
+                <p> I'm a Junior Software Developer interested in finding fun new ways to keep my brain continuously learning. 
+                    I find excitement in exploring new and innovative ideas and learning new skills (and collecting numerous plants).<br><br>
+                    I have a background in hospitality and leadership where, through planning events, supervising a team, 
+                    and being a part of a team, I grew to become a better leader, colleague, and communicator.<br><br> 
+                    I want to work on projects that challenge me to constantly improve on a team which encourages that same desire for growth. 
+                    My goal is to develop fun, practical, and easy to use web apps for a wide variety of people.<br><br>
+                    I also love being in nature - Ask me about my interests!</p>
+                    <br><hr>
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -68,7 +75,7 @@
 </div>
 
 
-<!-- -----------Services--------- -->
+<!------------- Services ----------->
 
 <div id="services">
     <div class="container">
@@ -77,62 +84,118 @@
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Web Design</h2>
-                <p>Description</p>
+                <p>Fullstack Professional Websites</p>
                 <a href="#">Learn More</a>
             </div>
             <div>
                 <i class="fa-solid fa-crop-simple"></i>
                 <h2>UI/UX Design</h2>
-                <p>Description</p>
+                <p>Seamless and Intuitive User Focused Pages
+                </p>
                 <a href="#">Learn More</a>
             </div>
             <div>
                 <i class="fa-solid fa-mobile-screen-button"></i>
                 <h2>App Design</h2>
-                <p>Description</p>
+                <p>Proactive and Engaing Applications</p>
                 <a href="#">Learn More</a>
             </div>
         </div>
     </div>
 </div>
 
-<!-- --------------Portfolio------------- -->
+<!---------------- My Work --------------->
 
-<div id="portfolio">
+<div id="my-work">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
-                <img src="images/TogaProfile.jpg">
+                <img src="images/VendingMachine.png">
                 <div class="layer">
-                    <h3>Vending Machine App</h3>
+                    <h3>Vending Machine</h3>
                     <p>Java based vending machine app (CLI) </p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="#" class="openDescription" data-modal="vending-machine"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="images/TogaTongue.jpg">
-                <div class="layer">
-                    <h3>TEnmo</h3>
+                <img src="images/Tenmo.png">
+                <div class="layer inactive">
+                    <h3>TEnmo - INACTIVE</h3>
                     <p>Java and PostgreSQL based cash-trading app (CLI)</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <!--<a href="#" class="openDescription" data-modal="tenmo"><i class="fa-solid fa-up-right-from-square"></i></a>-->
                 </div>
             </div>
             <div class="work">
-                <img src="images/TogaBelly.jpg">
+                <img src="images/Worldbyte-SignIn.png">
                 <div class="layer">
                     <h3>Worldbyte</h3>
                     <p>Meal prep and recipe sharing app which connects users across the globe (Fullstack)</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="#" class="openDescription" data-modal="world-byte"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div id="vending-machine" class="description-container">
+                <div class="description-content">
+                  <span class="close" data-modal="vending-machine"><i class="fa-solid fa-xmark"></i></span>
+                  <h1>Vending Machine</h1>
+                  <h2>Java - IntelliJ - Git - OOP</h2>
+                    <div class="container">
+                        <img src="images/VendingMachine.png">
+                        <p>A fully functioning Vending Machine all from the comfort of your own Command Line Interface!<br><br>
+                            This was created as my first project at Tech Elevator. I was paired with 1 other developer and 
+                            we were tasked with creating a vending machine app in Java using the Command Line Interface.<br><br>
+                            Primary functions include: inserting cash, purchasing items, receiving change in coins based on remaining cash value, 
+                            and saving all interactions in a log.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="tenmo" class="description-container">
+                <div class="description-content">
+                  <span class="close" data-modal="tenmo"><i class="fa-solid fa-xmark"></i></span>
+                  <h1>TEnmo</h1>
+                  <h2>PostgreSQL - RESTful API - Java - JDBC template - Spring Boot - OOP</h2>
+                    <div class="container">
+                        <img src="images/Tenmo.png">
+                        <p>A Venmo-clone application created to simulate cash-trading between users.<br><br>
+                        This was my second project at Tech Elevator. I was paired with 1 other developer and we were tasked with 
+                        creating a Venmo clone which would allow authorized users to trade cash between other authorized users. 
+                        We used a JDBC template and PostgreSQL to create communication between a server and database.
+                        Primary functions include: Creating accounts, Checking current balance, checking balance history, 
+                        and trading with other users.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="world-byte" class="description-container">
+                <div class="description-content">
+                  <span class="close" data-modal="world-byte"><i class="fa-solid fa-xmark"></i></span>
+                  <h1>World Byte</h1>
+                  <h2>HTML - CSS - Javascript - Vue.js - Axios - Java - PostgreSQL - RESTful API - Java - 
+                    JDBC template - Spring Boot - IntelliJ IDEA - OOP - Agile</h2>
+                    <div class="container">
+                        <!-- Fix images in CSS! -->
+                        <img src="images/Worldbyte-SignIn.png">
+                        <img src="images/Worldbyte.png">
+                        <p>A social media platform for meal planning and recipe archiving/sharing. Express your own
+                        unique brand of ideas and connect with other cultures and experiences across the entire planet 
+                        through archiving and sharing recipes on Worldbyte.<br><br>
+                        Created as a final capstone project for Tech Elevator Bootcamp. I worked with 3 other developers 
+                        and 1 project lead using agile methodologies while working toward objectives given to us by a product manager. 
+                        We were tasked to create a recipe sharing website. Worldbyte was then formed after 2 weeks.<br><br>
+                        I worked on the backend on this project and primarily focused on creating functions to ensure that the front end could communicate
+                        with the backend server, and the server could save and obtain data in the database using PostgreSQL and Postman.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See More</a>
+        <!--<a href="#" class="btn">See More</a>            Will be initiated when more projects are deployed-->
     </div>
 </div>
 
 
-<!-- ------------- Contact -------------- -->
+<!--------------- Contact ---------------->
 
 <div id="contact">
     <div class="container">
@@ -158,12 +221,10 @@
             </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>Copyright © Kevin. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
-    </div>
 </div>
 
 
+<!---------------- Functions ----------------->
 <script>
 
     let sideMenu = document.getElementById("side-menu");
@@ -188,7 +249,34 @@
         sideMenu.style.right = "-200px";
     }
 
+        // Open description on click
+    document.querySelectorAll('.openDescription').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const modalId = this.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'flex';
+    });
+    });
+
+    // Close description on click
+    document.querySelectorAll('.close').forEach(button => {
+    button.addEventListener('click', function() {
+        const modalId = this.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'none';
+    });
+    });
+
+    // Close description when clicking outside the content
+    window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('description-container')) {
+        event.target.style.display = 'none';
+    }
+    });
+
 </script>
+
+
+<!-------------- Form Submission ---------------->
 
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzoo0uTccN4O6soat-mnVP38JUsApkwnUc4b5KQeD96jUQc0JrfxFrmsVqPcJfLACTs/exec'
