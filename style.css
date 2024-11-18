@@ -121,7 +121,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #bfa987;
+    background: #e9d2b0;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -290,23 +290,44 @@ nav ul li a:hover::after{
 }
 .description-content{
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 0;
     border-radius: 8px;
     width: 1000px;
-    text-align: right;
+    text-align: center;
+    position: relative;
 }
 .description-content h1, .description-content h2{
-    text-align: center;
+    padding: 10px 0;
 }
-/*88888888888888888 fix images! 88888888888888888888888*/
+/*88888888888888888 fix images 88888888888888888888888*/
+
+/* create 2 columns and position them side by side */
 .description-content img{
     flex-basis: auto;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+    padding: 10px 0;
 }
-.description-content.container{
+.description-container .description-content .container{
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+}
+.img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 10px;
+}
+.description-text{
+    background: #e2e1e1;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    padding: 10px 30px;
+    margin-left: 20px;
 }
 .close {
     position: absolute;
@@ -403,11 +424,11 @@ nav .fa-solid{
         font-size: 20px;
     }
     nav ul{
-        background: #795d36;
+        background: #b3aaaa;
         position: fixed;
         top: 0;
         right: -200px;
-        width: 200px;
+        width: 160px;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
@@ -415,12 +436,12 @@ nav .fa-solid{
     }
     nav ul li{
         display: block;
-        margin: 25px;
+        margin: 20px;
     }
     nav ul .fa-solid{
         position: absolute;
-        top: 25px;
-        left: 125px;
+        top: 20px;
+        left: 105px;
         cursor: pointer;
     }
     .sub-title{
@@ -443,6 +464,39 @@ nav .fa-solid{
         flex-basis: 100%;
     }
     .copyright{
+        font-size: 14px;
+    }
+    .layer{
+        font-size: 16px;
+    }
+    .layer a{
+        line-height: 50px;
+        width: 50px;
+        height: 50px;
+    }
+    .description-content{
+        width: 90%;
+        height: 80%;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+    }
+    .description-content h1{
+        font-size: 20px;
+    }
+    .description-content h2{
+        font-size: 15px;
+    }
+    .description-container .description-content .container{
+        flex-direction: column;
+    }
+    .img-container{
+        width: 100%;
+        padding: 5px;
+    }
+    .description-text{
+        width: 100%;
+        padding: 5px 10px;
+        margin-left: 0px;
         font-size: 14px;
     }
 }
