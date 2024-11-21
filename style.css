@@ -31,6 +31,12 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    width: 90%;
+    top: 0;
+    z-index: 1000;
+    background-color: #f7fcf8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* adds a shadow to the bottom of the navbar to make it look nicer */
 }
 
 .logo{
@@ -409,13 +415,17 @@ nav .fa-solid{
     .logo{
         width: 80px;
     }
+    nav{
+        position: inherit;
+        width: 100%;
+    }
     #header{
         background-image: url(images/ProfileForMobile.jpg);
         background-size: 70% 60%;
         background-position: center 70%;
     }
     .header-text{
-        margin-top: 5%;
+        margin-top: 15%;
         font-size: 16px;
     }
     .header-text h1{
