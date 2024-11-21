@@ -423,12 +423,17 @@ nav .fa-solid{
     .logo{
         width: 80px;
     }
+    nav{
+        position: inherit;
+        width: 100%;
+    }
     #header{
         background-image: url(images/ProfileForMobile.jpg);
         background-size: 70% 60%;
         background-position: center 70%;
     }
     .header-text{
+        margin-top: 15%;
         margin-top: 15%;
         font-size: 16px;
     }
