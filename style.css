@@ -288,7 +288,7 @@ nav ul li a:hover::after{
 
 }
 .description-container {
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
