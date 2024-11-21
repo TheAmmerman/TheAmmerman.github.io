@@ -13,11 +13,11 @@
         <nav>
             <img src="images/Logo1.png" class="logo">
             <ul id="side-menu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#my-work">My Work</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#header" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#my-work" onclick="closeMenu()">My Work</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openMenu()"></i>
@@ -152,6 +152,7 @@
                             </p>
                         </div>
                     </div>
+                    <a href="https://github.com/TheAmmerman/Mainstay-Avenue/tree/main/vending-machine" class="btn modal-btn">Go To Code</a>
                 </div>
             </div>
             <div id="tenmo" class="description-container">
@@ -173,6 +174,8 @@
                             </p>
                         </div>
                     </div>
+                    <!-- Link not active yet. Change when TEnmo is uploaded -->
+                    <button class="btn">Go To Page</button>
                 </div>
             </div>
             <div id="world-byte" class="description-container">
@@ -197,6 +200,7 @@
                             </p>
                         </div>
                     </div>
+                    <a href="https://github.com/TheAmmerman/Mainstay-Avenue/tree/main/WorldByte" class="btn modal-btn">Go To Code</a>
                 </div>
             </div>
         </div>
@@ -225,7 +229,7 @@
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="text" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <button type="submit" class="btn btn2">Send</button>
                 </form>
                 <span id="msg"></span>
             </div>
@@ -283,7 +287,8 @@
     }
     });
 
-    // Smooth Scrolling Behavior
+    // Smooth Scrolling Behavior not working on my computer but works on my mobile device for some reason? dont understand
+
     /*document.addEventListener("DOMContentLoaded",function() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener("click", function(event) {

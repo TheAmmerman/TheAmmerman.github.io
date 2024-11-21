@@ -11,7 +11,6 @@ body{
     background: #f7fcf8;
     color: #000000;
 }
-
 #header {
     width: 100%;
     height: 100vh;
@@ -31,10 +30,18 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #f7fcf8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* adds a shadow to the bottom of the navbar to make it look nicer */
 }
 
 .logo{
     width: 100px;
+    margin-left: 5%;
 }
 
 nav ul li{
@@ -274,13 +281,14 @@ nav ul li a:hover::after{
     text-decoration: none;
     color: rgb(0, 0, 0);
     transition: background 0.5s;
+    cursor: pointer;
 }
 .btn:hover{
     background: #7ffadb;
 
 }
 .description-container {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -291,6 +299,8 @@ nav ul li a:hover::after{
     align-items: center;
 }
 .description-content{
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     padding: 20px 0;
     border-radius: 8px;
@@ -301,9 +311,6 @@ nav ul li a:hover::after{
 .description-content h1, .description-content h2{
     padding: 10px 0;
 }
-/*88888888888888888 fix images 88888888888888888888888*/
-
-/* create 2 columns and position them side by side */
 .description-content img{
     flex-basis: auto;
     flex-direction: column;
@@ -337,6 +344,13 @@ nav ul li a:hover::after{
     right: 15px;
     font-size: 20px;
     cursor: pointer;
+}
+.btn.modal-btn{
+    margin-top: 20px;
+    display: inline-block;
+}
+.description-content .btn.modal-btn{
+    align-self: center;
 }
 
 
@@ -415,7 +429,7 @@ nav .fa-solid{
         background-position: center 70%;
     }
     .header-text{
-        margin-top: 5%;
+        margin-top: 15%;
         font-size: 16px;
     }
     .header-text h1{
@@ -424,6 +438,7 @@ nav .fa-solid{
     nav .fa-solid{
         display: block;
         font-size: 20px;
+        margin-right: 5%;
     }
     nav ul{
         background: #b3aaaa;
